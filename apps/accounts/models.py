@@ -9,3 +9,7 @@ class DailyAccess(models.Model):
 
     class Meta:
         unique_together = ('username', 'ip_address', 'data')
+
+    def __str__(self):
+        return f'{self.username} - {self.ip_address} - {self.data}'
+    
