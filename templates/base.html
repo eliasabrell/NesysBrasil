@@ -8,8 +8,11 @@
     <meta name="description" content="Nesys">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nesys</title>
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    {% block head %}{% endblock head %}
 </head>
 
 <body>

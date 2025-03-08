@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="signup">
+    <h2>Login</h2>
+    
+    <form action="{% url 'accounts:login' %}" method="POST">{% csrf_token %}
+        <input type="text" name="username" placeholder="Nome de Usuário">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Senha">
+        <input type="submit" value="Logar">
+    </form>
+</section>
+    
+{% endblock content %}
