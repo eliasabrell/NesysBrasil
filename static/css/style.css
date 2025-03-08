@@ -1,19 +1,18 @@
 :root {
-    --orange: #e85002;
-    --primary: #000000;
+    --primary: #ff096c;
+    --secondary: #232323;
+    --three: #2a3843;
+    --four: #4f6172;
     --white: #f9f9f9;
-    --light-grey: #a7a7a7;
-    --grey: #646464;
-    --dark-grey: #333333;
 }
 
 body {
     display: grid;
     flex: 1 1 100vw;
     place-items: center;
-    background: var(--primary);
+    background: var(--secondary);
     overflow-x: hidden;
-    color: var(--white);
+    color: var(--four);
     transition: 200ms ease-in-out;
 }
 
@@ -24,6 +23,14 @@ header {
     justify-content: center;
     gap: 1rem;
     padding: 2rem;
+    width: 100%;
     background: var(--primary);
-    background-color: var(--orange);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
 }
