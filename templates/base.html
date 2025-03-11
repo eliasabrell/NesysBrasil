@@ -7,12 +7,10 @@
     <meta name="author" content="Abrell">
     <meta name="description" content="Nesys">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nesys</title>
+    <title>{% block "title" %}{% endblock %}</title>
+    {% block "head" %}{% endblock %}
     <link rel="stylesheet" href="{% static 'reset.css' %}">
-
     <link rel="stylesheet" href="{% static 'style.css' %}">
-
-    {% block head %}{% endblock head %}
 </head>
 
 <body>
@@ -23,10 +21,15 @@
                 <li><a href="{% url 'home:index' %}">Inicio</a></li>
                 <li><a href="{% url 'accounts:index' %}">Perfil</a></li>
                 <li><a href="{% url 'accounts:statistics' %}">Acessos</a></li>
+                <li><a href="{% url 'dashboard:index' %}">Dashboard</a></li>
             </ul>
         </nav>
     </header>
     <main>{% block content %}{% endblock content %}</main>
+    <footer>{% block "footer" %}{% endblock %}</footer>
+    <script src="{% static 'main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <noscript>Você precisa habilitar o JavaScript</noscript>
 </body>
 

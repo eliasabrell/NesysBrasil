@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block "head" %}
+<link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+{% endblock %}
+
+{% block "title" %}
+    Login
+{% endblock %}
+
 {% block content %}
-<section class="signup">
+<section class="card">
     <h2>Login</h2>
     
     <form action="{% url 'accounts:login' %}" method="POST">{% csrf_token %}
